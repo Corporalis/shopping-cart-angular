@@ -1,6 +1,7 @@
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import {
   ApplicationConfig,
+  ApplicationModule,
   isDevMode,
   provideZoneChangeDetection,
 } from '@angular/core';
@@ -22,5 +23,6 @@ export const appConfig: ApplicationConfig = {
     provideEffects(ProductEffects),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
     provideHttpClient(withFetch()),
+    ApplicationModule,
   ],
 };
