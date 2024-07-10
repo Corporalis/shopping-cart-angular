@@ -25,8 +25,7 @@ import { ProductsModule } from '../products/products.module';
   template: `<app-products
     [products]="products$ | async"
     (addProductEvent)="addProductToCart($event)"
-  >
-  </app-products>`,
+  />`,
 })
 export class ProductsContainerComponent {
   products$: Observable<Product[]>;
