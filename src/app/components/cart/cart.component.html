@@ -5,4 +5,8 @@
         <p>{{ product.price | currency }}</p>
         <button (click)="removeProduct(product.id)">Remove</button>
     </div>
+    @if(!cart?.length)
+    {
+    <p>Your cart is empty.</p>
+    }
 </div>
