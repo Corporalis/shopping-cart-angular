@@ -1,5 +1,8 @@
 <nav>
-  <a routerLink="/">Products</a>
-  <a routerLink="/cart">Cart</a>
+  <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/">Products</a>
+  <a [routerLink]="['/cart']" routerLinkActive="active" routerLink="/cart">Cart</a>
 </nav>
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
