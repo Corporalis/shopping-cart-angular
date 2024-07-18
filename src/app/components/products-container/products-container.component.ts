@@ -10,7 +10,7 @@ import {
   loadProducts,
 } from '../../store/product/actions/product.actions';
 import { selectAllProducts } from '../../store/product/selectors/product.selectors';
-import { ProductsModule } from '../products/products.module';
+import { ProductsContainerModule } from './products.container.module';
 
 @Component({
   selector: 'app-products-container',
@@ -20,7 +20,7 @@ import { ProductsModule } from '../products/products.module';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    ProductsModule,
+    ProductsContainerModule,
   ],
   template: `<app-products
     [products]="products$ | async"

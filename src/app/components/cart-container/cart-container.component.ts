@@ -7,7 +7,7 @@ import { Product } from '../../models/product';
 import { State } from '../../models/state';
 import { selectCartProducts } from '../../store/cart/selectors/cart.selectors';
 import { removeFromCart } from '../../store/product/actions/product.actions';
-import { CartModule } from '../cart/cart.module';
+import { CartContainerModule } from './cart-container.module';
 
 @Component({
   selector: 'app-cart-container',
@@ -17,7 +17,7 @@ import { CartModule } from '../cart/cart.module';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    CartModule,
+    CartContainerModule,
   ],
   template: `<app-cart
     [cart]="cart$ | async"
